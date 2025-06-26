@@ -10,33 +10,71 @@
     <title>The Lab</title>
 
 </head>
+ <!-- Full-width images with number text -->
+      <div id="slideshow-container">
 
-  <body style="overflow-y: scroll">
-  <!-- Navbar -->
-    <div id="navbar">
-      <ul id="nav">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="thegallery.html">The Gallery</a>
-        </li>
-        <li><a href="thelounge.html">The Lounge</a>
-        </li>
-        <li><a href="aboutme.html">About Me</a></li>
-      </ul>
+        <div class="mySlides fade">
+          <a class="button" href="#">Check it out!</a>
+          <div class="numbertext">The Gallery Coming Soon</div>
+          <img src="assets/gallery/gallery photo.png" style="width:100%">
+          <div class="text">Caption Text</div>
+          
+        </div>
+        
+        <div class="mySlides fade">
+          <a class="button" href="#">Coming Soon</a>
+          <div class="numbertext">The Lounge Coming Soon</div>
+          <img src="assets/gallery/lounge2.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <a class="button" href="#">Coming Soon</a>
+          <div class="numbertext">The Kitchen Coming Soon</div>
+          <img src="assets/gallery/kitchen.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        
+        <div class="dots-wrapper" style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div> 
+       
+        <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+     
+      
+      
+      
+    
+
+
+  
+    <!-- Subscribe section -->
+    <div class="subscribe">
+      <h1>Subscribe</h1>
+      <input type="text" placeholder="Enter e-mail" size="100" id="subBox">
+      <a href="#0" type="button" class="button" style="margin-top: 10px">Subscribe</a>
+      <p>Get notified when we drop something new!</p>
     </div>
-    
-   <div>
-    <!--Intro-->
-    
-   </div> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    <div class="row" id="footer">
-      <!-- Subscribe section -->
-      <!--<div class="subscribe">
-        <h1>Subscribe</h1>
-        <input type="text" placeholder="Enter e-mail" size="100" id="subBox">
-        <a href="#0" type="button" class="button" style="margin-top: 10px">Subscribe</a>
-        <p>Get notified when we drop something new!</p>
-      </div>-->
+    <div class="row">
         <!-- About Column -->
       <div class="info-column" id="aboutus">
         <h2>Socials</h2>
@@ -48,7 +86,8 @@
       </div>
         <!-- Questions -->
         <div class="info-column" id="questions">
-          <h2>Send a message!</h2>
+          <h2>Questions or conerns?</h2>
+          <h4>Let us know here.</h4>
           <div>
             <form action="/action_page.php" target="_blank" id="questions">
               <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required id="questions"></p>

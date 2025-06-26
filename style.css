@@ -1,0 +1,342 @@
+*{
+  box-sizing: border-box;
+  margin-top: 0px;
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("assets/gallery/fonts/Montserrat-Regular.ttf");
+}
+
+body{
+  background-color: #fff0d3;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px; /*sets space between pips*/
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  left: 50%;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.button{
+  background-color: white;
+  padding: 6px 45px;
+}
+
+div.scroll-container {
+    position: absolute;
+    flex-wrap: center;
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+    width: 200px;
+    object-fit: cover;
+  }
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+/*.container {
+  position: relative;
+  border-color: white;
+  border: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.center{
+  position: relative;
+}  
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+#slideshow-container {
+  position: relative;
+  margin-top: 50px;
+  width: 90%;
+  left: 5%;
+  max-height: 600px;
+  overflow: hidden;
+  top: 25px;
+}
+
+#slideshow-container a.button{
+  color: white;
+  background-color: black;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+
+.slideshow-container img{
+  height: 600px;
+}
+
+
+.subscribe{
+  display: block;
+  text-align: center; 
+  position: relative;
+  top: 30px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 0 0 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+#slideshow-container .numbertext {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active, .demo:hover {
+  opacity: 1;
+}
+
+#footer {
+  position: fixed;
+  bottom: 2%;
+}
+
+.info-column {
+  display: inline;
+}
+
+.info-column#aboutus {
+  text-align: left;
+  width: 33.33%;
+  position: relative;
+  padding-left: 0px;
+}
+
+.info-column#store {
+  text-align: right;
+  width: 33.33%;
+  position: relative;
+  padding-right: 0px;
+}
+
+.info-column#questions {
+  text-align: center;
+  position: relative;
+  width: 33.33%;
+}
+
+.mySlides{
+  display: none;
+}
+
+#subBox{
+  height: 35px;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4{
+  font-weight:normal;
+}
+
+h2{
+  margin-block: 0px;
+}
+
+input#questions{
+  height: 30px;
+  width: 400px;
+}
+
+.row{
+  width: 70%;
+  left: 15%;
+  bottom: 5%;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar {
+  display: inline-block;
+  position: absolute;
+  justify-content: space-around;
+}
+
+#nav {
+  list-style: none inside;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  left: 25%;
+}
+
+#nav li {
+  display: flex;
+  position: relative;
+  float: left;
+  background: #fff0d3;
+  /* menu background color */
+  font-size: 150%;
+  padding: 20px;
+  
+}
+
+#nav li a {
+  text-align: center;
+  padding: 0;
+  text-decoration: none;
+  width: 200px;
+  /* this is the width of the menu items */
+  line-height: 35px;
+  /* this is the hieght of the menu items */
+  color: black;
+  /* list item font color */
+  
+}
+
+#nav li li a {
+  font-size: 80%;
+}
+
+/* smaller font size for sub menu items */
+#nav li:hover {
+  background: whitesmoke;
+}
+
+/* highlights current hovered list item and the parent list items when hovering over sub menues */
+#nav ul {
+  position: absolute;
+  z-index: 5;
+  padding: 0;
+  left: 0;
+  display: none;
+  /* hides sublists */
+}
+
+#nav li:hover ul ul {
+  display: none;
+}
+
+/* hides sub-sublists */
+#nav li:hover ul {
+  display: block;
+}
+
+/* shows sublist on hover */
+#nav li li:hover ul {
+  display: block;
+  /* shows sub-sublist on hover */
+  margin-left: 200px;
+  /* this should be the same width as the parent list item */
+  margin-top: -35px;
+  /* aligns top of sub menu with top of*/
+}/*# sourceMappingURL=index.css.map */
+
+h2{
+  padding-bottom: 20px;
+}
